@@ -1,0 +1,282 @@
+body {
+  background-image: linear-gradient(90deg, #fff, rgba(45, 33, 214, 0.2117647059));
+  color: rgb(49, 49, 49);
+}
+
+.header-section {
+  font-weight: 700;
+}
+
+.text-primary {
+  color: #5a8eff !important;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+.text-7xl {
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1;
+}
+
+.text-9xl {
+  font-size: 8rem;
+  line-height: 1;
+}
+
+.fw-100 {
+  font-weight: 100;
+}
+
+.fw-200 {
+  font-weight: 200;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.navbar {
+  padding: 25px 10px 25px 10px;
+}
+.navbar ul.navbar-nav {
+  gap: 20px;
+}
+.navbar ul.navbar-nav li {
+  align-self: center;
+}
+.navbar ul.navbar-nav li a {
+  transition: 0.3s;
+}
+.navbar ul.navbar-nav li a:hover {
+  letter-spacing: 1px;
+}
+.navbar ul.navbar-nav li a,
+.navbar ul.navbar-nav li .btn-light,
+.navbar ul.navbar-nav li a.active {
+  color: #353535;
+  font-weight: 500;
+}
+.navbar ul.navbar-nav li a,
+.navbar ul.navbar-nav li button {
+  font-size: 14px;
+}
+
+#header .header {
+  height: calc(100vh - 110px);
+}
+#header .header h1 {
+  font-size: 55px;
+  font-weight: 600;
+}
+#header .header a {
+  text-decoration: none !important;
+}
+#header .header span {
+  font-size: 14px;
+  line-height: 21px;
+}
+#header .header .sub-header {
+  color: #5a8eff;
+  font-size: 14px;
+  background-color: rgba(33, 214, 75, 0.1098039216);
+  padding: 12px 20px;
+  border-radius: 12px;
+}
+#header .header .header-statistic {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.062);
+}
+#header .header .header-statistic h5 {
+  color: #5a8eff;
+  font-weight: 600;
+}
+
+#destinationList .destination-price {
+  font-weight: 700;
+  font-size: 18px;
+  color: rgb(255, 82, 82);
+}
+#destinationList .destination-categories {
+  display: flex;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 8px;
+  right: 20px;
+  top: 20px;
+  z-index: 9999;
+}
+#destinationList .destination-categories span {
+  color: rgb(255, 82, 82);
+}
+#destinationList .destination-airlines {
+  display: flex;
+  background-color: rgb(243, 243, 243);
+  margin: auto 10px auto auto;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  padding: 10px;
+}
+#destinationList .destination-airlines img {
+  width: 100%;
+  height: 35px;
+  margin: auto;
+}
+#destinationList .owl-carousel .card,
+#destinationList .row .card {
+  overflow: hidden;
+}
+#destinationList .owl-carousel .card .card-header,
+#destinationList .row .card .card-header {
+  padding: 0;
+  overflow: hidden;
+  height: 250px !important;
+  display: flex;
+}
+#destinationList .owl-carousel .card .card-header .card-img-top,
+#destinationList .row .card .card-header .card-img-top {
+  transition: 0.3s;
+}
+#destinationList .owl-carousel .card h5,
+#destinationList .row .card h5 {
+  transition: 0.3s;
+}
+#destinationList .owl-carousel .card:hover .card-img-top,
+#destinationList .row .card:hover .card-img-top {
+  transform: scale(1.2);
+}
+
+#destinationDetail h4 {
+  font-weight: 600;
+}
+#destinationDetail #img-thumbnail {
+  height: 100% !important;
+}
+#destinationDetail .destination-img-thumbnail {
+  margin: auto;
+  margin-top: 20px;
+}
+#destinationDetail .destination-img-thumbnail input {
+  display: none;
+}
+#destinationDetail .destination-img-thumbnail input:checked + img {
+  border: 2px solid #5a8eff;
+}
+#destinationDetail .destination-img-thumbnail img {
+  border-radius: 4px;
+  width: 100px !important;
+  height: 70px !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+#destinationDetail .jenis-kegiatan .btn-outline-primary:focus, #destinationDetail .jenis-kegiatan .btn-outline-primary:active {
+  box-shadow: none;
+}
+#destinationDetail .jenis-kegiatan .btn-check:focus + .btn-outline-primary {
+  box-shadow: none;
+  background-color: #fff;
+}
+#destinationDetail .jenis-kegiatan .btn-check:active + .btn-outline-primary {
+  box-shadow: none;
+  background-color: #ffffff;
+}
+#destinationDetail .jenis-kegiatan .btn-check:checked + .btn-outline-primary {
+  box-shadow: none;
+  background-color: #e7ffec;
+}
+#destinationDetail .jenis-kegiatan .btn-outline-primary {
+  color: rgb(34, 34, 34);
+  transition: 0.3s;
+}
+#destinationDetail .jenis-kegiatan .btn-outline-primary:hover {
+  background-color: #eefff1;
+}
+
+.card {
+  border: 0;
+  border-radius: 6px;
+}
+.card .card-title {
+  font-weight: 600 !important;
+}
+
+.owl-stage-outer {
+  padding: 30px 0;
+}/*# sourceMappingURL=app.css.map */

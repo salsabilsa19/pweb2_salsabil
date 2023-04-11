@@ -1,0 +1,25 @@
+.navbar {
+    padding: 25px 10px 25px 10px;
+    ul.navbar-nav {
+        gap: 20px;
+        li {
+            align-self: center;
+            a {
+                transition: 0.3s;
+                &:hover {
+                    letter-spacing: 1px;
+                }
+            }
+            a,
+            .btn-light,
+            a.active {
+                color: #353535;
+                font-weight: 500;
+            }
+            a,
+            button {
+                font-size: 14px;
+            }
+        }
+    }
+}

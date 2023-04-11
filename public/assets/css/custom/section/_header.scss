@@ -1,0 +1,36 @@
+#header {
+    .header {
+        height: calc(100vh - 110px);
+        h1 {
+            font-size: 55px;
+            font-weight: 600;
+        }
+        a {
+            text-decoration: none !important;
+        }
+        span {
+            font-size: 14px;
+            line-height: 21px;
+        }
+        .sub-header {
+            color: #5a8eff;
+            font-size: 14px;
+            background-color: #21d64b1c;
+            padding: 12px 20px;
+            border-radius: 12px;
+        }
+        .header-statistic {
+            h5 {
+                color: #5a8eff;
+                font-weight: 600;
+            }
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.062);
+        }
+    }
+}

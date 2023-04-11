@@ -1,0 +1,119 @@
+#destinationList {
+    .destination-price {
+        font-weight: 700;
+        font-size: 18px;
+        color: rgb(255, 82, 82);
+    }
+    .destination-categories {
+        display: flex;
+        position: absolute;
+        background-color: #fff;
+        border-radius: 50px;
+        padding: 8px;
+        right: 20px;
+        top: 20px;
+        z-index: 9999;
+        span {
+            color: rgb(255, 82, 82);
+        }
+    }
+    .destination-airlines {
+        display: flex;
+        background-color: rgb(243, 243, 243);
+        margin: auto 10px auto auto;
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        padding: 10px;
+        img {
+            width: 100%;
+            height: 35px;
+            margin: auto;
+        }
+    }
+    .owl-carousel,
+    .row {
+        .card {
+            overflow: hidden;
+            .card-header {
+                padding: 0;
+                overflow: hidden;
+                height: 250px !important;
+                display: flex;
+                .card-img-top {
+                    transition: 0.3s;
+                }
+            }
+            h5 {
+                transition: 0.3s;
+            }
+            &:hover {
+                .card-img-top {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}
+#destinationDetail {
+    h4 {
+        font-weight: 600;
+    }
+    #img-thumbnail {
+        height: 100% !important;
+    }
+    .destination-img-thumbnail {
+        margin: auto;
+        margin-top: 20px;
+        input {
+            display: none;
+            &:checked {
+                + img {
+                    border: 2px solid #5a8eff;
+                }
+            }
+        }
+        img {
+            border-radius: 4px;
+            width: 100px !important;
+            height: 70px !important;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    .jenis-kegiatan {
+        .btn-outline-primary {
+            &:focus,
+            &:active {
+                box-shadow: none;
+            }
+        }
+        .btn-check {
+            &:focus {
+                + .btn-outline-primary {
+                    box-shadow: none;
+                    background-color: #fff;
+                }
+            }
+            &:active {
+                + .btn-outline-primary {
+                    box-shadow: none;
+                    background-color: #ffffff;
+                }
+            }
+            &:checked {
+                + .btn-outline-primary {
+                    box-shadow: none;
+                    background-color: #e7ffec;
+                }
+            }
+        }
+        .btn-outline-primary {
+            color: rgb(34, 34, 34);
+            transition: 0.3s;
+            &:hover {
+                background-color: #eefff1;
+            }
+        }
+    }
+}
