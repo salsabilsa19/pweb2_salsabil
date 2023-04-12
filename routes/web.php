@@ -47,6 +47,4 @@ Route::prefix('admin')->name('admin.')->group(function() {
 
 Route::resource('petugas', PetugasController::class);
 Route::resource('masyarakat', MasyarakatController::class);
-
-Route::get('/tagihan', ['TagihanController::class']);
-Route::get('/tagihan/create', ['TagihanController::class']);
+Route::resource('tagihan', TagihanController::class);
