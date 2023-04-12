@@ -11,7 +11,7 @@
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
                         <li class="breadcrumb-item"><a href="javascript: void(0);">Beranda</a></li>
-                        <li class="breadcrumb-item"><a href="{{ route('petugas.index') }}">Daftar Tagihan</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('tagihan.index') }}">Daftar Tagihan</a></li>
                         <li class="breadcrumb-item active">Tambah</li>
                     </ol>
                 </div>
@@ -35,36 +35,45 @@
                         @csrf
 
                         <div class="row mb-3">
-                            <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Nama Petugas') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Nama Pelanggan') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text"
-                                    class="form-control @error('name') is-invalid @enderror" name="name"
-                                    value="{{old('name')}}" autocomplete="name" autofocus>
+                                <input id="name" type="text" name="name" autocomplete="name" autofocus>
+                            </div>
 
-                                @error('name')
+                            @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                            </div>
                         </div>
 
                         <div class="row mb-3">
-                            <label for="email"
-                                class="col-md-4 col-form-label text-md-end">{{ __('Alamat Email') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="text"
-                                    class="form-control @error('email') is-invalid @enderror" name="email"
-                                    value="{{old('email')}}" autocomplete="email" autofocus>
+                                <input id="email" type="text" name="email" autocomplete="email" autofocus>
+                            </div>
+
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span> 
+                                @enderror
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="email" type="text" name="email" autocomplete="email" autofocus>
+                            </div>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                            </div>
                         </div>
 
                         <div class="row mb-0">
