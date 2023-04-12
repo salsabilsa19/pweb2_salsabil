@@ -2,12 +2,7 @@
 
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\DaftarCalonSiswa\AdministrasiController;
-use App\Http\Controllers\DaftarCalonSiswa\AkademikController;
-use App\Http\Controllers\DaftarCalonSiswa\NonAkademikController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\JadwalPengumumanController;
 use App\Http\Controllers\MasyarakatController;
 use App\Http\Controllers\PetugasController;
 use Illuminate\Support\Facades\Route;

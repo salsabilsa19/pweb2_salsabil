@@ -1,5 +1,5 @@
 @extends('layouts.index')
-@section('title', 'Daftar Masyarakat - MTI Priangan')
+@section('title', 'Daftar Masyarakat - PAMSIMAS')
 
 @section('content')
     <!-- start page title -->

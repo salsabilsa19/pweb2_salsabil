@@ -14,11 +14,11 @@
             <div class="navbar-brand-box d-flex">
                 <a href="/" class="logo logo-light m-auto">
                     <span class="logo-sm">
-                        <img src="{{asset('assets/images/logo/logo-1.png')}}" alt="" height="22">
+                        <img src="{{asset('/public/assets/images/logo/logopam2.png')}}" alt="" height="22">
                     </span>
                     <span class="logo-lg">
                         <div class="d-flex justify-content-center">
-                            <img src="{{asset('assets/images/logo/logo-1.png')}}" alt="" height="22">
+                            <img src="{{asset('assets/images/logo/logopam2.png')}}" alt="" height="22">
                             <h4 class="ms-3 text-white fw-bold">SIPA Pamsimas</h4>
                         </div>
                     </span>
