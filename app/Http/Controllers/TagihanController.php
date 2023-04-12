@@ -17,14 +17,14 @@ class TagihanController extends Controller
     public function index()
     {
         
-        $tagihan = Tagihan::all();
-        return view('pages.tagihan.index', compact(['tagihan']));
+        $data['tagihan'] = Tagihan::all();
+        return view('pages.tagihan.index', $data);
     
     }
 
     public function create()
     {
-        return view('tagihan.create');
+        return view('pages.tagihan.create');
     }
     
 
