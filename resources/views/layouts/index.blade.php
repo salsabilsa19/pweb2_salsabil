@@ -4,6 +4,7 @@
       <title>@yield('title')</title>
       @include('layouts.includes.head')
       @include('layouts.includes.head-style')
+      <meta name="csrf-token" content="{{ csrf_token() }}" />
   </head>
 <body>
 

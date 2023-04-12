@@ -30,7 +30,7 @@ class Tagihan extends Model
         'alamat', 
         'notelp', 
         'jumlahtagihan', 
-        'status_pembayaran'
+        'statuspembayaran'
     ];
     
     /**

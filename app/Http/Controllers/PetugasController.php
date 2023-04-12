@@ -54,6 +54,8 @@ class PetugasController extends Controller
         } else {
             return redirect()->back();
         }
+
+        
     }
 
     /**
