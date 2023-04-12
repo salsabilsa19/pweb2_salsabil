@@ -14,7 +14,7 @@
             <div class="navbar-brand-box d-flex">
                 <a href="/" class="logo logo-light m-auto">
                     <span class="logo-sm">
-                        <img src="{{asset('/public/assets/images/logo/logopam2.png')}}" alt="" height="22">
+                        <img src="{{asset('/assets/images/logo/logopam2.png')}}" alt="" height="22">
                     </span>
                     <span class="logo-lg">
                         <div class="d-flex justify-content-center">
@@ -26,7 +26,9 @@
             </div>
 
             <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
-                <i class="fa fa-fw fa-bars"></i>
+                {{-- <i class="fa fa-fw fa-bars"></i> --}}
+                {{-- <img src="{{ asset('images/logo/logopam2.png') }}" alt="Logopam2"> --}}
+
             </button>
             <span class="m-auto">
                 {{$role}}
@@ -93,6 +95,13 @@
                     <a href="{{route('masyarakat.index')}}" class="nav-link {{ (request()->is('masyarakat*')) ? 'mm-active' : '' }}" href="{{ route('masyarakat.index') }}">
                         <i class='bx bx-user'></i>
                         <span>Masyarakat</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{route('tagihan.index')}}" class="nav-link {{ (request()->is('tagihan*')) ? 'mm-active' : '' }}" href="{{ route('tagihan.index') }}">
+                        <i class='bx bx-user'></i>
+                        <span>Tagihan</span>
                     </a>
                 </li>
                 @endif

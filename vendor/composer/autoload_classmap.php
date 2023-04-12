@@ -8,9 +8,6 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
-    'App\\Exports\\AdministrasiExport' => $baseDir . '/app/Exports/AdministrasiExport.php',
-    'App\\Exports\\AkademikExport' => $baseDir . '/app/Exports/AkademikExport.php',
-    'App\\Exports\\NonAkademikExport' => $baseDir . '/app/Exports/NonAkademikExport.php',
     'App\\Http\\Controllers\\AdminAuthController' => $baseDir . '/app/Http/Controllers/AdminAuthController.php',
     'App\\Http\\Controllers\\AuthController' => $baseDir . '/app/Http/Controllers/AuthController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
@@ -30,8 +27,6 @@ return array(
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\Models\\AccMasyarakat' => $baseDir . '/app/Models/AccMasyarakat.php',
     'App\\Models\\AccPetugas' => $baseDir . '/app/Models/AccPetugas.php',
-    'App\\Models\\JadwalPengumuman' => $baseDir . '/app/Models/JadwalPengumuman.php',
-    'App\\Models\\Student' => $baseDir . '/app/Models/Student.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',

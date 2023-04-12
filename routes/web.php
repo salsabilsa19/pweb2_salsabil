@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\MasyarakatController;
 use App\Http\Controllers\PetugasController;
+use App\Http\Controllers\TagihanController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -46,3 +47,6 @@ Route::prefix('admin')->name('admin.')->group(function() {
 
 Route::resource('petugas', PetugasController::class);
 Route::resource('masyarakat', MasyarakatController::class);
+
+Route::get('/tagihan', ['TagihanController::class']);
+Route::get('/tagihan/create', ['TagihanController::class']);

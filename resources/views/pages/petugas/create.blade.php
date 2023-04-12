@@ -1,5 +1,5 @@
 @extends('layouts.index')
-@section('title', 'Tambah | Daftar Petugas Pamsimas - MTI Priangan')
+@section('title', 'Tambah | Daftar Petugas Pamsimas - PAMSIMAS')
 
 @section('content')
     <!-- start page title -->
