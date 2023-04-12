@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\AccPetugas;
-use App\Models\JadwalPengumuman;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
