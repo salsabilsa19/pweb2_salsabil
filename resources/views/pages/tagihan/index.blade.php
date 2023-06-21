@@ -44,9 +44,9 @@
                             <thead>
                                 <tr>
                                     <th>Nama Pelanggan</th>
-                                    <th>Email</th>
                                     <th>Alamat</th>
-                                    <th>No. Telp</th>
+                                    <th>Tagihan Sebelumnya</th>
+                                    <th>Tagihan Sekarang</th>
                                     <th>Jumlah Tagihan</th>
                                     <th>Status Pembayaran</th>
                                     <th style="max-width: 10px">Aksi</th>
