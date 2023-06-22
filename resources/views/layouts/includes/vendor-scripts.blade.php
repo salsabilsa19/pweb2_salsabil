@@ -41,3 +41,29 @@
 
 <!-- App js -->
 <script src="{{asset('assets/admin/assets/js/app.js')}}"></script>
+{{-- kalkulasi tagihan ala ala --}}
+{{-- <script>
+  const sebelumnyaInput = document.getElementById('alamat');
+  const sekarangInput = document.getElementById('notelp');
+
+  sebelumnyaInput.addEventListener('input', calculateDifference);
+  sekarangInput.addEventListener('input', calculateDifference);
+
+  function calculateDifference() {
+      const sebelumnyaValue = parseFloat(sebelumnyaInput.value) || 0;
+      const sekarangValue = parseFloat(sekarangInput.value) || 0;
+      const hasil = sekarangValue - sebelumnyaValue;
+
+      // Tampilkan hasil pada elemen dengan id "hasil"
+      document.getElementById('hasil').textContent = hasil;
+  }
+</script> --}}
+
+<script>
+  function pengurangan() {
+      var _bil2 = document.getElementById('alamat').value;
+      var _bil1 = document.getElementById('notelp').value;
+      _hasil = parseInt(_bil1) - parseInt(_bil2);
+      document.getElementById('hasil').innerHTML = _hasil;
+  }
+</script>

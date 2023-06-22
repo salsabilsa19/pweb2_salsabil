@@ -49,7 +49,7 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Alamat') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="text" name="email" autocomplete="email" autofocus>
@@ -63,10 +63,10 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="alamat" class="col-md-4 col-form-label text-md-end">{{ __('Alamat') }}</label>
+                            <label for="alamat" class="col-md-4 col-form-label text-md-end">{{ __('Meteran Sebelumnya') }}</label>
 
                             <div class="col-md-6">
-                                <input id="alamat" type="text" name="alamat" autocomplete="alamat" autofocus>
+                                <input id="alamat" type="number" name="alamat" autocomplete="alamat" autofocus>
                             </div>
 
                                 @error('alamat')
@@ -77,10 +77,10 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="notelp" class="col-md-4 col-form-label text-md-end">{{ __('No. Telepon') }}</label>
+                            <label for="notelp" class="col-md-4 col-form-label text-md-end">{{ __('Meteran Sekarang') }}</label>
 
                             <div class="col-md-6">
-                                <input id="notelp" type="number" name="notelp" autocomplete="notelp" autofocus>
+                                <input id="notelp" type="number" name="notelp" autocomplete="notelp" autofocus onkeyup="pengurangan()">
                             </div>
 
                                 @error('notelp')
@@ -94,7 +94,7 @@
                             <label for="jumlahtagihan" class="col-md-4 col-form-label text-md-end">{{ __('Jumlah Tagihan') }}</label>
 
                             <div class="col-md-6">
-                                <input id="jumlahtagihan" type="text" name="jumlahtagihan" autocomplete="jumlahtagihan" autofocus>
+                                <input id="hasil" type="text" name="jumlahtagihan" autocomplete="jumlahtagihan" autofocus>
                             </div>
 
                                 @error('jumlahtagihan')
@@ -127,12 +127,19 @@
                                 <button type="submit" class="btn btn-primary">
                                     Simpan
                                 </button>
-                            </div>
+                            </div>                            
                         </div>
                     </form>
-
                 </div>
             </div>
         </div> <!-- end col -->
     </div> <!-- end row -->
+    <script>
+        function pengurangan() {
+            var _bil2 = document.getElementById('alamat').value;
+            var _bil1 = document.getElementById('notelp').value;
+            _hasil = parseInt(_bil1) - parseInt(_bil2);
+            document.getElementById('hasil').innerHTML.value = _hasil;
+        }
+    </script>
 @endsection
