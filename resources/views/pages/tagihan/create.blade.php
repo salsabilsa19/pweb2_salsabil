@@ -133,13 +133,5 @@
                 </div>
             </div>
         </div> <!-- end col -->
-    </div> <!-- end row -->
-    <script>
-        function pengurangan() {
-            var _bil2 = document.getElementById('alamat').value;
-            var _bil1 = document.getElementById('notelp').value;
-            _hasil = parseInt(_bil1) - parseInt(_bil2);
-            document.getElementById('hasil').innerHTML.value = _hasil;
-        }
-    </script>
+    </div> <!-- end row -->    
 @endsection

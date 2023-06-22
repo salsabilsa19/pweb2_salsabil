@@ -39,5 +39,13 @@
 @yield('scripts')
 
 <script src="{{asset('assets/admin/assets/js/app.js')}}"></script>
+<script>
+  function pengurangan() {
+      var _bil2 = document.getElementById('alamat').value;
+      var _bil1 = document.getElementById('notelp').value;
+      _hasil = parseInt(_bil1) - parseInt(_bil2);
+      document.getElementById('hasil').innerHTML.value = _hasil;
+  }
+</script>
 </body>
 </html>
