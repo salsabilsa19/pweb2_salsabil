@@ -31,7 +31,9 @@
                     <p class="card-title-desc">Ubah daftar tagihan </code>.
                     </p>
 
-
+                    <form method="POST" action="/tagihan/{{ $data['id'] }}">
+                        @method('PUT')
+                        @csrf                    
                         <div class="row mb-2">
                             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Nama Pelanggan') }}</label>
 
@@ -47,10 +49,10 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Alamat') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="text" name="email" autocomplete="email" autofocus value="{{$data['email']}}">
+                                <input id="email" type="text" name="alamat" autocomplete="email" autofocus value="{{$data['alamat']}}">
                             </div>
 
                                 @error('email')
@@ -61,10 +63,10 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="alamat" class="col-md-4 col-form-label text-md-end">{{ __('Alamat') }}</label>
+                            <label for="alamat" class="col-md-4 col-form-label text-md-end">{{ __('Meteran Sebelumnya') }}</label>
 
                             <div class="col-md-6">
-                                <input id="alamat" type="text" name="alamat" autocomplete="alamat" autofocus value="{{$data['alamat']}}">
+                                <input id="sebelumnya" type="text" name="sebelumnya" autocomplete="alamat" autofocus value="{{$data['sebelumnya']}}">
                             </div>
 
                                 @error('alamat')
@@ -75,10 +77,10 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="notelp" class="col-md-4 col-form-label text-md-end">{{ __('No. Telepon') }}</label>
+                            <label for="notelp" class="col-md-4 col-form-label text-md-end">{{ __('Meteran Sekarang') }}</label>
 
                             <div class="col-md-6">
-                                <input id="notelp" type="text" name="notelp" autocomplete="notelp" autofocus value="{{$data['notelp']}}">
+                                <input id="sekarang" type="text" name="sekarang" autocomplete="notelp" onkeyup="hitungtagihan()" autofocus value="{{$data['sekarang']}}">
                             </div>
 
                                 @error('notelp')
@@ -92,7 +94,7 @@
                             <label for="jumlahtagihan" class="col-md-4 col-form-label text-md-end">{{ __('Jumlah Tagihan') }}</label>
 
                             <div class="col-md-6">
-                                <input id="jumlahtagihan" type="text" name="jumlahtagihan" autocomplete="jumlahtagihan" autofocus value="{{$data['jumlahtagihan']}}">
+                                <input id="hasil" type="text" name="jumlahtagihan" autocomplete="jumlahtagihan" autofocus value="{{$data['jumlahtagihan']}}">
                             </div>
 
                                 @error('jumlahtagihan')
@@ -127,7 +129,7 @@
                                 </button>
                             </div>
                         </div>
-
+                    
 
                 </div>
             </div>
@@ -146,9 +148,9 @@
 $("#simpan").click(function(){
     let data={
         name: $('#name').val(),
-        email: $('#email').val(),
         alamat: $('#alamat').val(),
-        notelp: $('#notelp').val(),
+        sebelumnya: $('#sebelumnya').val(),
+        sekarang: $('#sekarang').val(),
         jumlahtagihan: $('#jumlahtagihan').val(),
         statuspembayaran: $('#statuspembayaran').val()
     }

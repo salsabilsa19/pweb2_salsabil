@@ -40,11 +40,18 @@
 
 <script src="{{asset('assets/admin/assets/js/app.js')}}"></script>
 <script>
-  function pengurangan() {
-      var _bil2 = document.getElementById('alamat').value;
-      var _bil1 = document.getElementById('notelp').value;
+  function hitungtagihan() {
+      var _bil2 = document.getElementById('sebelumnya').value;
+      var _bil1 = document.getElementById('sekarang').value;
       _hasil = parseInt(_bil1) - parseInt(_bil2);
-      document.getElementById('hasil').innerHTML.value = _hasil;
+
+      var hasilAkhir;
+        if (_hasil < 3000) {
+          hasilAkhir = 10000;
+        } else {
+          hasilAkhir = _hasil * 3;
+        }
+    document.getElementById('hasil').value = hasilAkhir;
   }
 </script>
 </body>

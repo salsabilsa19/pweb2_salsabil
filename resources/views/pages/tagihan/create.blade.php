@@ -49,10 +49,10 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Alamat') }}</label>
+                            <label for="alamat" class="col-md-4 col-form-label text-md-end">{{ __('Alamat') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="text" name="email" autocomplete="email" autofocus>
+                                <input id="text" type="text" name="alamat" autocomplete="alamat" autofocus>
                             </div>
 
                                 @error('email')
@@ -63,10 +63,10 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="alamat" class="col-md-4 col-form-label text-md-end">{{ __('Meteran Sebelumnya') }}</label>
+                            <label for="sebelumnya" class="col-md-4 col-form-label text-md-end">{{ __('Meteran Sebelumnya') }}</label>
 
                             <div class="col-md-6">
-                                <input id="alamat" type="number" name="alamat" autocomplete="alamat" autofocus>
+                                <input id="sebelumnya" type="number" name="sebelumnya" autocomplete="sebelumnya" autofocus>
                             </div>
 
                                 @error('alamat')
@@ -77,10 +77,10 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="notelp" class="col-md-4 col-form-label text-md-end">{{ __('Meteran Sekarang') }}</label>
+                            <label for="sekarang" class="col-md-4 col-form-label text-md-end">{{ __('Meteran Sekarang') }}</label>
 
                             <div class="col-md-6">
-                                <input id="notelp" type="number" name="notelp" autocomplete="notelp" autofocus onkeyup="pengurangan()">
+                                <input id="sekarang" type="number" name="sekarang" autocomplete="notelp" autofocus onkeyup="hitungtagihan()">
                             </div>
 
                                 @error('notelp')
@@ -96,7 +96,7 @@
                             <div class="col-md-6">
                                 <input id="hasil" type="text" name="jumlahtagihan" autocomplete="jumlahtagihan" autofocus>
                             </div>
-
+                            {{-- <span id="hasil"></span> --}}
                                 @error('jumlahtagihan')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

@@ -16,11 +16,11 @@ return new class extends Migration
         Schema::create('tagihan', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('email')->unique();
+            $table->string('alamat');
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('alamat')->nullable();
-            $table->string('notelp')->nullable();
-            $table->string('jumlahtagihan');
+            $table->integer('sebelumnya')->nullable();
+            $table->integer('sekarang')->nullable();
+            $table->integer('jumlahtagihan');
             $table->enum('statuspembayaran' ,['Lunas','Belum Bayar']);
             $table->rememberToken();
             $table->timestamps();

@@ -41,9 +41,9 @@ class TagihanController extends Controller
         
         $validatedData = $request->validate([
             'name'     => ['required', 'string', 'max:255'],
-            'email'    => ['required', 'string', 'email', 'max:255', 'unique:acc_petugas'],
-            'alamat'   => ['required', 'string', 'max:255'],
-            'notelp'   => ['required', 'string', 'max:15'],
+            'alamat'    => ['required', 'string', 'max:100'],
+            'sebelumnya' => ['required', 'integer'],
+            'sekarang' => ['required', 'integer'],            
             'jumlahtagihan'   => ['required', 'string', 'max:20'],
             'statuspembayaran'   => ['required', 'string', 'max:255'],
 
@@ -51,20 +51,51 @@ class TagihanController extends Controller
 
         $user = Tagihan::create([
             'name'     => $validatedData['name'],
-            'email'    => $validatedData['email'],
-            'alamat' => $validatedData['alamat'],
-            'notelp' => $validatedData['notelp'],
+            'alamat'    => $validatedData['alamat'],
+            'sebelumnya' => $validatedData['sebelumnya'],
+            'sekarang' => $validatedData['sekarang'],
             'jumlahtagihan'  => $validatedData['jumlahtagihan'],
             'statuspembayaran'  => $validatedData['statuspembayaran'],
         ]);
+        
 
         if($user) {
-            return redirect()->route('petugas.index');
+            // dd($user);
+            return redirect()->route('tagihan.index');
         } else {
+            // dd($user);
             return redirect()->back();
         }
 
     }
+    // {
+        
+    //     $validatedData = $request->validate([
+    //         'name'     => ['required', 'string', 'max:255'],
+    //         'email'    => ['required', 'string', 'email', 'max:255', 'unique:acc_petugas'],
+    //         'alamat'   => ['required', 'string', 'max:255'],
+    //         'notelp'   => ['required', 'string', 'max:15'],
+    //         'jumlahtagihan'   => ['required', 'string', 'max:20'],
+    //         'statuspembayaran'   => ['required', 'string', 'max:255'],
+
+    //     ]);
+
+    //     $user = Tagihan::create([
+    //         'name'     => $validatedData['name'],
+    //         'email'    => $validatedData['email'],
+    //         'alamat' => $validatedData['alamat'],
+    //         'notelp' => $validatedData['notelp'],
+    //         'jumlahtagihan'  => $validatedData['jumlahtagihan'],
+    //         'statuspembayaran'  => $validatedData['statuspembayaran'],
+    //     ]);
+
+    //     if($user) {
+    //         return redirect()->route('petugas.index');
+    //     } else {
+    //         return redirect()->back();
+    //     }
+
+    // }
 
     /**
      * Display the specified resource.
@@ -102,18 +133,24 @@ class TagihanController extends Controller
 
         $validatedData = $request->validate([
             'name'     => ['required', 'string', 'max:255'],
-            'email'    => 'required|string|email|max:255|unique:tagihan,email,'.$id,
-            'alamat'   => ['required', 'string', 'max:255'],
-            'notelp'   => ['required', 'string', 'max:15'],
+            'alamat'    => ['required', 'string', 'max:100'],
+            'sebelumnya' => ['required', 'integer'],
+            'sekarang' => ['required', 'integer'],
             'jumlahtagihan'   => ['required', 'string', 'max:20'],
             'statuspembayaran'   => ['required', 'string', 'max:255'],
+            // 'name'     => ['required', 'string', 'max:255'],
+            // 'email'    => 'required|string|email|max:255|unique:tagihan,email,'.$id,
+            // 'alamat'   => ['required', 'string', 'max:255'],
+            // 'notelp'   => ['required', 'string', 'max:15'],
+            // 'jumlahtagihan'   => ['required', 'string', 'max:20'],
+            // 'statuspembayaran'   => ['required', 'string', 'max:255'],
 
         ]);
         $user = Tagihan::find($id);
         $user->name = $request->name;
-        $user->email = $request->email;
         $user->alamat = $request->alamat;
-        $user->notelp = $request->notelp;
+        $user->sebelumnya = $request->sebelumnya;
+        $user->sekarang = $request->sekarang;
         $user->jumlahtagihan = $request->jumlahtagihan;
         $user->statuspembayaran = $request->statuspembayaran;
         $user->save(); 

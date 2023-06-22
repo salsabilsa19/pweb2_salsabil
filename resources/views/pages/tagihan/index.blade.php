@@ -45,8 +45,8 @@
                                 <tr>
                                     <th>Nama Pelanggan</th>
                                     <th>Alamat</th>
-                                    <th>Tagihan Sebelumnya</th>
-                                    <th>Tagihan Sekarang</th>
+                                    <th>Meteran Sebelumnya</th>
+                                    <th>Meteran Sekarang</th>
                                     <th>Jumlah Tagihan</th>
                                     <th>Status Pembayaran</th>
                                     <th style="max-width: 10px">Aksi</th>
@@ -58,9 +58,10 @@
                                 @foreach ($tagihan as $item)
                                     <tr>
                                         <td>{{ $item->name }}</td>
-                                        <td>{{ $item->email }}</td>
                                         <td>{{ $item->alamat }}</td>
-                                        <td>{{ $item->notelp }}</td>
+                                        <td>{{ $item->sebelumnya }}</td>
+                                        <td>{{ $item->sekarang }}</td>
+
                                         <td>{{ $item->jumlahtagihan }}</td>
                                         <td>{{ $item->statuspembayaran }}</td>
                                         <td>
