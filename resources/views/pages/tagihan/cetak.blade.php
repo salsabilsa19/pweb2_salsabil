@@ -16,6 +16,7 @@
 <body>
   <div class="form-group">
     <h2 align="center"><b>Laporan Data Pembayaran SIPA</b></h2>
+    <p align="center">{{ $tglawal}} - {{ $tglakhir}}</p>
     <br>
     {{-- <p>{{ $tagihan->created_at }}</p> --}}
     <table class="static" align="center" rules="all" border="1px" style="width: 95%">      

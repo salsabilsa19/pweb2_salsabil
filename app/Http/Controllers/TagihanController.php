@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Tagihan;
 use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -32,7 +33,11 @@ class TagihanController extends Controller
 
     public function laporanPerTanggal($tglawal, $tglakhir)
     {
-        $datacetak['tagihan'] = Tagihan::all()->whereBetween('created_at',[$tglawal,$tglakhir]);
+        Carbon::setLocale('id');
+        // $datacetak['tglakhir'] = Carbon::parse($tglakhir);
+        $datacetak['tglawal'] = Carbon::parse($tglawal)->locale('id')->isoFormat('D MMMM Y');
+        $datacetak['tglakhir'] = Carbon::parse($tglakhir)->locale('id')->isoFormat('D MMMM Y');
+        $datacetak['tagihan'] = Tagihan::all()->whereBetween('created_at',[$tglawal,$tglakhir]);        
         return view('pages.tagihan.cetak', $datacetak);
         // dd('Tanggal Awal : '.$tglawal. 'Tanggal Akhir : '.$tglakhir);
     }
