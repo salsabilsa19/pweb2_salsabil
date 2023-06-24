@@ -34,7 +34,8 @@
                         </div>
 
                         <div class="">
-                            <a href="{{ route('tagihan.create') }}" class="btn btn-primary">Tambah <i class="bx bx-plus"></i></a>
+                            <a href="{{ route('tagihan.create') }}" class="btn btn-primary mr-2">Tambah <i class="bx bx-plus"></i></a>
+                            {{-- <a href="{{ route('tagihan.cetak') }}" class="btn btn-success mr-2">Cetak <i class="bx bx-printer"></i></a> --}}
                         </div>
                     </div>
 
@@ -44,11 +45,13 @@
                             <thead>
                                 <tr>
                                     <th>Nama Pelanggan</th>
-                                    <th>Alamat</th>
-                                    <th>Meteran Sebelumnya</th>
+                                    {{-- <th>Alamat</th> --}}
+                                    <th>No. Sambungan</th>
+                                    <th>Tanggal Penagihan</th>
                                     <th>Meteran Sekarang</th>
                                     <th>Jumlah Tagihan</th>
                                     <th>Status Pembayaran</th>
+                                    <th>Meteran Sebelumnya</th>
                                     <th style="max-width: 10px">Aksi</th>
                                 </tr>
                             </thead>
@@ -58,12 +61,14 @@
                                 @foreach ($tagihan as $item)
                                     <tr>
                                         <td>{{ $item->name }}</td>
-                                        <td>{{ $item->alamat }}</td>
-                                        <td>{{ $item->sebelumnya }}</td>
+                                        {{-- <td>{{ $item->alamat }}</td> --}}
+                                        <td>{{ $item->no_sambungan }}</td>
+                                        <td>{{ $item->created_at->format('d M Y') }}</td>
                                         <td>{{ $item->sekarang }}</td>
-
+                                        
                                         <td>{{ $item->jumlahtagihan }}</td>
                                         <td>{{ $item->statuspembayaran }}</td>
+                                        <td>{{ $item->sebelumnya }}</td>
                                         <td>
                                             <div class="d-flex gap-3">
                                                 <a class="btn btn-outline-primary" href="{{ route('tagihan.edit',$item->id) }}"><i class="bx bx-pencil"></i> Ubah</a>

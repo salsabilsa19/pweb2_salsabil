@@ -50,4 +50,10 @@ Route::resource('masyarakat', MasyarakatController::class);
 Route::resource('tagihan', TagihanController::class);
 
 Route::put('/tagihan/{id}',[TagihanController::class, 'update'])->name('updatetagihan');
+//cetak laporan
+// Route::get('/tagihan/cetak',[TagihanController::class, 'cetakForm'])->name('cetakLaporan');
+Route::get('/cetak', [TagihanController::class, 'cetakForm'])->name('tagihan.cetak.form');
+//laporanPerTanggal
+Route::get('/cetak/{tglawal}/{tglakhir}', [TagihanController::class, 'laporanPerTanggal'])->name('tagihan.pertanggal');
+
 // Route::post('tagihan', 'tagihan')->name('tagihan.create');

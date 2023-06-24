@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('tagihan', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('alamat');
+            $table->string('name');            
+            $table->string('no_sambungan');
             $table->timestamp('email_verified_at')->nullable();
             $table->integer('sebelumnya')->nullable();
             $table->integer('sekarang')->nullable();

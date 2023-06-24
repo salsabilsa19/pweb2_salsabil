@@ -104,6 +104,12 @@
                         <span>Tagihan</span>
                     </a>
                 </li>
+                <li>
+                    <a href="{{route('tagihan.cetak.form')}}" class="nav-link {{ (request()->is('cetak*')) ? 'mm-active' : '' }}" href="{{ route('tagihan.cetak.form') }}">
+                        <i class='bx bx-printer'></i>
+                        <span>Cetak Laporan</span>
+                    </a>
+                </li>
                 @endif
 
             </ul>

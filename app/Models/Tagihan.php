@@ -26,7 +26,7 @@ class Tagihan extends Model
 
     protected $fillable = [
         'name', 
-        'alamat', 
+        'no_sambungan',
         'sebelumnya', 
         'sekarang', 
         'jumlahtagihan', 

@@ -31,7 +31,7 @@
                     <p class="card-title-desc">Ubah daftar tagihan </code>.
                     </p>
 
-                    <form method="POST" action="/tagihan/{{ $data['id'] }}">
+                    <form method="POST" action="{{ route('updatetagihan', $data['id']) }}">
                         @method('PUT')
                         @csrf                    
                         <div class="row mb-2">
@@ -49,10 +49,10 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Alamat') }}</label>
+                            <label for="no_sambungan" class="col-md-4 col-form-label text-md-end">{{ __('No Sambungan') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="text" name="alamat" autocomplete="email" autofocus value="{{$data['alamat']}}">
+                                <input id="no_sambungan" type="text" name="no_sambungan" autocomplete="no_sambungan" autofocus value="{{$data['no_sambungan']}}">
                             </div>
 
                                 @error('email')
@@ -121,7 +121,6 @@
                                     </span>
                                 @enderror
                         </div>
-
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button id="simpan" type="submit" class="btn btn-primary">
@@ -129,7 +128,7 @@
                                 </button>
                             </div>
                         </div>
-                    
+                    </form>
 
                 </div>
             </div>
@@ -139,7 +138,7 @@
 @section('scripts')
 
 
-<script>
+{{-- <script>
     $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -168,5 +167,5 @@ $("#simpan").click(function(){
 }); 
 });
 
-</script>
+</script> --}}
 @endsection

@@ -48,7 +48,7 @@
                                 @enderror
                         </div>
 
-                        <div class="row mb-3">
+                        {{-- <div class="row mb-3">
                             <label for="alamat" class="col-md-4 col-form-label text-md-end">{{ __('Alamat') }}</label>
 
                             <div class="col-md-6">
@@ -60,6 +60,13 @@
                                         <strong>{{ $message }}</strong>
                                     </span> 
                                 @enderror
+                        </div> --}}
+                        <div class="row mb-3">
+                            <label for="no_sambungan" class="col-md-4 col-form-label text-md-end">{{ __('Nomor Sambungan') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="text" type="text" name="no_sambungan" autocomplete="alamat" autofocus>
+                            </div>                                
                         </div>
 
                         <div class="row mb-3">

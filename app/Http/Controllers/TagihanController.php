@@ -19,6 +19,23 @@ class TagihanController extends Controller
         $data['tagihan'] = Tagihan::all();
         return view('pages.tagihan.index', $data);
     }
+    // public function cetakLaporan()
+    // {
+    //     $datacetak['tagihan'] = Tagihan::all();
+    //     return view('pages.tagihan.cetak', $datacetak);
+    // }
+    public function cetakForm()
+    {
+        $datacetak['tagihan'] = Tagihan::all();
+        return view('pages.tagihan.cetakform', $datacetak);
+    }
+
+    public function laporanPerTanggal($tglawal, $tglakhir)
+    {
+        $datacetak['tagihan'] = Tagihan::all()->whereBetween('created_at',[$tglawal,$tglakhir]);
+        return view('pages.tagihan.cetak', $datacetak);
+        // dd('Tanggal Awal : '.$tglawal. 'Tanggal Akhir : '.$tglakhir);
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -41,7 +58,8 @@ class TagihanController extends Controller
         
         $validatedData = $request->validate([
             'name'     => ['required', 'string', 'max:255'],
-            'alamat'    => ['required', 'string', 'max:100'],
+            // 'alamat'    => ['required', 'string', 'max:100'],
+            'no_sambungan' => ['required', 'string', 'max:5'],
             'sebelumnya' => ['required', 'integer'],
             'sekarang' => ['required', 'integer'],            
             'jumlahtagihan'   => ['required', 'string', 'max:20'],
@@ -51,7 +69,8 @@ class TagihanController extends Controller
 
         $user = Tagihan::create([
             'name'     => $validatedData['name'],
-            'alamat'    => $validatedData['alamat'],
+            // 'alamat'    => $validatedData['alamat'],
+            'no_sambungan'    => $validatedData['no_sambungan'],
             'sebelumnya' => $validatedData['sebelumnya'],
             'sekarang' => $validatedData['sekarang'],
             'jumlahtagihan'  => $validatedData['jumlahtagihan'],
@@ -132,8 +151,8 @@ class TagihanController extends Controller
     {
 
         $validatedData = $request->validate([
-            'name'     => ['required', 'string', 'max:255'],
-            'alamat'    => ['required', 'string', 'max:100'],
+            'name'     => ['required', 'string', 'max:255'],            
+            'no_sambungan' => ['required', 'string', 'max:5'],
             'sebelumnya' => ['required', 'integer'],
             'sekarang' => ['required', 'integer'],
             'jumlahtagihan'   => ['required', 'string', 'max:20'],
@@ -147,8 +166,8 @@ class TagihanController extends Controller
 
         ]);
         $user = Tagihan::find($id);
-        $user->name = $request->name;
-        $user->alamat = $request->alamat;
+        $user->name = $request->name;        
+        $user->no_sambungan = $request->no_sambungan;
         $user->sebelumnya = $request->sebelumnya;
         $user->sekarang = $request->sekarang;
         $user->jumlahtagihan = $request->jumlahtagihan;
@@ -157,6 +176,7 @@ class TagihanController extends Controller
         if($user) {
             return redirect()->route('tagihan.index');
         } else {
+            dd($user);
             return redirect()->back();
         }
 
