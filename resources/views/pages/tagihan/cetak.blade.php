@@ -22,13 +22,17 @@
     <table class="static" align="center" rules="all" border="1px" style="width: 95%">      
       <thead>
         <tr>
-            <th>Nama Pelanggan</th>
+            <th rowspan="2">Nama Pelanggan</th>
+            <th rowspan="2">No Sambungan</th>
             {{-- <th>Alamat</th> --}}
-            <th>Meteran Sebelumnya</th>
-            <th>Meteran Sekarang</th>
-            <th>Jumlah Tagihan</th>
-            <th>Status Pembayaran</th>
+            <th colspan="2">Meteran</th>
+            <th rowspan="2">Jumlah Tagihan</th>
+            <th rowspan="2">Status Pembayaran</th>
             {{-- <th style="max-width: 10px">Aksi</th> --}}
+        </tr>
+        <tr>
+          <th rowspan="1">Sebelumnya</th>
+          <th rowspan="1">Sekarang</th>
         </tr>
     </thead>
     <tbody>
@@ -36,7 +40,7 @@
         @foreach ($tagihan as $item)
             <tr>
                 <td>{{ $item->name }}</td>
-                {{-- <td>{{ $item->alamat }}</td> --}}
+                <td>{{ $item->no_sambungan }}</td>
                 <td>{{ $item->sebelumnya }}</td>
                 <td>{{ $item->sekarang }}</td>
 
